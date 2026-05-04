@@ -117,6 +117,9 @@ ul { list-style: none; }
   white-space: nowrap;
 }
 .btn i { width: 18px; height: 18px; }
+.btn .brand-svg { width: 17px; height: 17px; flex-shrink: 0; }
+.brand-svg { width: 17px; height: 17px; display: inline-block; vertical-align: middle; flex-shrink: 0; }
+.brand-svg.sm { width: 15px; height: 15px; margin-right: 0.25rem; }
 .btn-primary {
   background: var(--accent);
   color: #051b2c;
@@ -394,6 +397,8 @@ ul { list-style: none; }
 }
 .contact-direct a:hover { color: var(--accent); }
 .contact-direct i { width: 16px; height: 16px; color: var(--accent); }
+.contact-direct .brand-svg { color: var(--accent); }
+.footer-links .brand-svg { width: 17px; height: 17px; }
 
 /* ---------- Skills ---------- */
 .skills-grid {
