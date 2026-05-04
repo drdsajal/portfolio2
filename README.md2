@@ -1,0 +1,27 @@
+# Assets folder
+
+## To add your profile photo:
+
+1. Save your photo as `profile.jpg` in this folder.
+   - Recommended size: **600×600 px** (square).
+   - JPG or PNG works (if PNG, also rename to `profile.png` and update the `<img src>` in `index.html`).
+2. The image will appear automatically in the hero card.
+3. If no photo is found, the site shows a stylish **DS** initials fallback (no broken icon).
+
+## To add your downloadable CV:
+
+1. Save your CV as `Dev_Sajal_CV.pdf` in this folder.
+2. The “Download CV” button in the header will serve it.
+
+## Folder structure expected on GitHub Pages:
+
+```
+portfolio/
+├── index.html
+├── style.css
+├── script.js
+└── assets/
+    ├── profile.jpg          (your photo)
+    └── Dev_Sajal_CV.pdf     (your CV)
+```
+
