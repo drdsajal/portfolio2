@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dev Rabi Das Sajal — PhD Researcher in Information Technology. Portfolio showcasing skills, projects, and experience." />
+  <title>Dev Rabi Das Sajal — IT Researcher &amp; Data Analyst</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Animated grid background -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand" aria-label="Dev Sajal — Home">
+        <span class="brand-bracket">&lt;</span>
+        <span class="brand-name">DRD<span class="accent">.</span>Sajal</span>
+        <span class="brand-bracket">/&gt;</span>
+      </a>
+
+      <nav class="top-nav" aria-label="Primary">
+        <a href="#" class="nav-link" data-tab="summary">Summary</a>
+        <a href="#" class="nav-link" data-tab="skills">Skills</a>
+        <a href="#" class="nav-link" data-tab="projects">Projects</a>
+        <a href="#" class="nav-link" data-tab="experience">Experience</a>
+      </nav>
+
+      <a href="assets/Dev_Sajal_CV.pdf" class="btn btn-primary header-cta" download>
+        <i data-lucide="download"></i>
+        <span>Download CV</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <div class="terminal-line">
+          <span class="prompt">~$</span>
+          <span class="typed" id="typed"></span><span class="caret">_</span>
+        </div>
+        <h1 class="hero-title">
+          Dev Rabi Das <span class="gradient-text">Sajal</span>
+        </h1>
+        <p class="hero-subtitle">
+          PhD Researcher in Information Technology &middot; MBA &middot; Data &amp; Process Analyst
+        </p>
+        <p class="hero-desc">
+          Bridging 8+ years of telecom operations leadership with applied IT research in
+          digital transformation, e-government, and data-driven service delivery.
+        </p>
+
+        <div class="hero-meta">
+          <span class="meta-chip"><i data-lucide="map-pin"></i> Kuala Lumpur, Malaysia</span>
+          <span class="meta-chip status"><span class="dot"></span> Available for IT &amp; Data roles</span>
+        </div>
+
+        <div class="hero-actions">
+          <a href="mailto:drd.sajal1992@gmail.com" class="btn btn-primary">
+            <i data-lucide="mail"></i><span>Get in touch</span>
+          </a>
+          <a href="https://linkedin.com/in/drdsajal" target="_blank" rel="noopener" class="btn btn-ghost">
+            <i data-lucide="linkedin"></i><span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Profile card -->
+      <aside class="profile-card">
+        <div class="profile-window">
+          <div class="window-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="window-title">profile.sh</span>
+          </div>
+          <div class="profile-body">
+            <!--
+              ▸ TO ADD YOUR PHOTO:
+                1. Place a square image at: assets/profile.jpg  (recommend 600x600px)
+                2. The image will appear automatically below.
+                3. To use a different filename, change the src in the <img> tag below.
+            -->
+            <div class="avatar-wrap">
+              <img
+                src="assets/profile.jpg"
+                alt="Dev Rabi Das Sajal"
+                class="avatar-img"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="avatar-fallback">DS</div>
+              <span class="online-badge" title="Active"></span>
+            </div>
+            <div class="profile-lines">
+              <p><span class="key">name</span><span class="eq">=</span><span class="val">"Dev Sajal"</span></p>
+              <p><span class="key">role</span><span class="eq">=</span><span class="val">"PhD Researcher (IT)"</span></p>
+              <p><span class="key">focus</span><span class="eq">=</span><span class="val">"Digital Transformation"</span></p>
+              <p><span class="key">stack</span><span class="eq">=</span><span class="val">["SQL","Python","Excel"]</span></p>
+              <p><span class="key">status</span><span class="eq">=</span><span class="val ok">"open_to_work"</span></p>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Tabs -->
+  <main class="container main-area">
+    <div class="tabs" role="tablist" aria-label="Portfolio sections">
+      <button class="tab active" role="tab" data-tab="summary" aria-selected="true">
+        <i data-lucide="user"></i><span>Summary</span>
+      </button>
+      <button class="tab" role="tab" data-tab="skills" aria-selected="false">
+        <i data-lucide="cpu"></i><span>Skills</span>
+      </button>
+      <button class="tab" role="tab" data-tab="projects" aria-selected="false">
+        <i data-lucide="folder-git-2"></i><span>Projects</span>
+      </button>
+      <button class="tab" role="tab" data-tab="experience" aria-selected="false">
+        <i data-lucide="briefcase"></i><span>Experience</span>
+      </button>
+    </div>
+
+    <!-- SUMMARY -->
+    <section class="tab-panel active" id="panel-summary" role="tabpanel">
+      <div class="panel-header">
+        <span class="panel-tag">// 01</span>
+        <h2>About Me</h2>
+        <p class="panel-sub">A snapshot of who I am, what I research, and where I'm going.</p>
+      </div>
+
+      <div class="summary-grid">
+        <article class="card card-lg">
+          <h3 class="card-title"><i data-lucide="sparkles"></i> Profile</h3>
+          <p>
+            I'm a PhD researcher in Information Technology at City University Malaysia,
+            with an MBA and over 8 years of progressive experience in telecom customer
+            service operations at Robi Axiata PLC. My work sits at the intersection of
+            <strong>operations, data, and digital transformation</strong>—turning
+            real-world service problems into measurable, technology-driven outcomes.
+          </p>
+          <p>
+            I led a team of customer service representatives, built performance
+            dashboards, and implemented automation that improved response times by 70%.
+            Now I'm channelling that operational lens into academic research on
+            <strong>e-government and public-sector innovation in South Asia</strong>.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3 class="card-title"><i data-lucide="flask-conical"></i> Current Research</h3>
+          <ul class="bullet-list">
+            <li>Digital transformation in the public sector</li>
+            <li>E-government initiatives &amp; adoption</li>
+            <li>Public-sector innovation in South Asia (esp. Bangladesh)</li>
+            <li>Technology-enabled service delivery</li>
+          </ul>
+          <p class="muted small">PhD in IT &middot; expected Dec 2029</p>
+        </article>
+
+        <article class="card">
+          <h3 class="card-title"><i data-lucide="languages"></i> Languages</h3>
+          <div class="lang-list">
+            <div class="lang-row"><span>Bangla</span><span class="lang-level">Native</span></div>
+            <div class="lang-row"><span>English</span><span class="lang-level">Fluent (MOI)</span></div>
+            <div class="lang-row"><span>Hindi</span><span class="lang-level">Fluent</span></div>
+            <div class="lang-row"><span>Malay</span><span class="lang-level">Learning</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3 class="card-title"><i data-lucide="graduation-cap"></i> Education</h3>
+          <div class="edu-item">
+            <p class="edu-deg">PhD in Information Technology</p>
+            <p class="edu-school">City University Malaysia, Kuala Lumpur</p>
+            <p class="muted small">Expected Dec 2029 &middot; Pre-requisites completed</p>
+          </div>
+          <div class="edu-item">
+            <p class="edu-deg">Master of Business Administration (MBA)</p>
+            <p class="edu-school">Govt. Tolaram College, Narayanganj</p>
+            <p class="muted small">2016 &middot; CGPA 2.88/4 &middot; 32/32 credits</p>
+          </div>
+        </article>
+
+        <article class="card card-contact">
+          <h3 class="card-title"><i data-lucide="send"></i> Get in Touch</h3>
+          <p class="muted">Open to IT support, data analysis, and research collaborations.</p>
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <input type="text" id="cf-name" placeholder="Your name" required />
+              <input type="email" id="cf-email" placeholder="you@example.com" required />
+            </div>
+            <textarea id="cf-msg" rows="3" placeholder="What would you like to discuss?" required></textarea>
+            <button type="submit" class="btn btn-primary">
+              <i data-lucide="send-horizontal"></i><span>Send via Email</span>
+            </button>
+            <p class="form-note muted small">Opens your email client &middot; or write directly to <a href="mailto:drd.sajal1992@gmail.com">drd.sajal1992@gmail.com</a></p>
+          </form>
+          <div class="contact-direct">
+            <a href="tel:+60177411436"><i data-lucide="phone"></i> +60 17-741 1436</a>
+            <a href="https://linkedin.com/in/drdsajal" target="_blank" rel="noopener"><i data-lucide="linkedin"></i> /drdsajal</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="tab-panel" id="panel-skills" role="tabpanel">
+      <div class="panel-header">
+        <span class="panel-tag">// 02</span>
+        <h2>Skills &amp; Toolbox</h2>
+        <p class="panel-sub">Technical capabilities, tools I work with daily, and the soft skills that hold it all together.</p>
+      </div>
+
+      <div class="skills-grid">
+        <article class="card skill-card">
+          <h3 class="card-title"><i data-lucide="code-2"></i> Technical</h3>
+          <div class="skill-row"><span>SQL</span><div class="bar"><span style="width:88%"></span></div></div>
+          <div class="skill-row"><span>Python (automation)</span><div class="bar"><span style="width:78%"></span></div></div>
+          <div class="skill-row"><span>Microsoft Access</span><div class="bar"><span style="width:80%"></span></div></div>
+          <div class="skill-row"><span>Wireshark</span><div class="bar"><span style="width:65%"></span></div></div>
+          <div class="skill-row"><span>LaTeX</span><div class="bar"><span style="width:75%"></span></div></div>
+        </article>
+
+        <article class="card skill-card">
+          <h3 class="card-title"><i data-lucide="layout-dashboard"></i> Tools &amp; Systems</h3>
+          <div class="tag-cloud">
+            <span class="tag">Excel (dashboards)</span>
+            <span class="tag">CRM Systems</span>
+            <span class="tag">Power Query</span>
+            <span class="tag">Pivot Tables</span>
+            <span class="tag">Git &amp; GitHub</span>
+            <span class="tag">Linux Basics</span>
+            <span class="tag">Networking</span>
+            <span class="tag">Troubleshooting</span>
+          </div>
+        </article>
+
+        <article class="card skill-card">
+          <h3 class="card-title"><i data-lucide="target"></i> Core Competencies</h3>
+          <div class="comp-grid">
+            <div class="comp"><i data-lucide="bar-chart-3"></i><span>Data Analysis</span></div>
+            <div class="comp"><i data-lucide="workflow"></i><span>Process Improvement</span></div>
+            <div class="comp"><i data-lucide="users"></i><span>Team Leadership</span></div>
+            <div class="comp"><i data-lucide="presentation"></i><span>Reporting</span></div>
+            <div class="comp"><i data-lucide="messages-square"></i><span>Cross-functional</span></div>
+            <div class="comp"><i data-lucide="shield-check"></i><span>Quality Assurance</span></div>
+          </div>
+        </article>
+
+        <article class="card skill-card">
+          <h3 class="card-title"><i data-lucide="book-open"></i> Research Skills</h3>
+          <ul class="bullet-list">
+            <li>Academic writing &amp; literature review</li>
+            <li>Qualitative &amp; mixed-methods research</li>
+            <li>Survey design &amp; analysis</li>
+            <li>Citation management (BibTeX)</li>
+            <li>Public-sector innovation frameworks</li>
+          </ul>
+        </article>
+
+        <article class="card skill-card span-2">
+          <h3 class="card-title"><i data-lucide="award"></i> Certifications</h3>
+          <div class="cert-list">
+            <div class="cert">
+              <div class="cert-icon"><i data-lucide="badge-check"></i></div>
+              <div>
+                <p class="cert-name">Google IT Support Professional Certificate</p>
+                <p class="muted small">Coursera &middot; Troubleshooting, Networking, OS, System Administration, Security</p>
+              </div>
+            </div>
+            <div class="cert">
+              <div class="cert-icon"><i data-lucide="badge-check"></i></div>
+              <div>
+                <p class="cert-name">PhD Pre-requisite Coursework — IT</p>
+                <p class="muted small">City University Malaysia &middot; Research Methods, Advanced IT</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="tab-panel" id="panel-projects" role="tabpanel">
+      <div class="panel-header">
+        <span class="panel-tag">// 03</span>
+        <h2>Projects</h2>
+        <p class="panel-sub">Selected work blending operations, data, and research.</p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project">
+          <div class="project-head">
+            <div class="project-icon"><i data-lucide="database"></i></div>
+            <span class="project-status">Completed</span>
+          </div>
+          <h3 class="project-title">Customer Service Data Analysis</h3>
+          <p class="project-desc">
+            Built SQL queries and Excel dashboards to surface KPIs (FCR, AHT, CSAT) for a
+            6-person service team. Identified recurring issue patterns that drove
+            workflow redesign.
+          </p>
+          <div class="project-tags">
+            <span class="tag">SQL</span><span class="tag">Excel</span><span class="tag">CRM</span><span class="tag">Dashboards</span>
+          </div>
+          <div class="project-footer">
+            <span><i data-lucide="trending-up"></i> 70% faster response time</span>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <div class="project-icon"><i data-lucide="terminal"></i></div>
+            <span class="project-status">Internal Tool</span>
+          </div>
+          <h3 class="project-title">Python Automation Scripts</h3>
+          <p class="project-desc">
+            Authored Python scripts to automate repetitive reporting tasks—daily exports,
+            data cleaning, and ticket categorisation—freeing supervisors to focus on
+            escalations.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Automation</span>
+          </div>
+          <div class="project-footer">
+            <span><i data-lucide="clock"></i> Saved ~10 hrs / week</span>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <div class="project-icon"><i data-lucide="file-text"></i></div>
+            <span class="project-status">Ongoing</span>
+          </div>
+          <h3 class="project-title">Academic Writing &amp; Research</h3>
+          <p class="project-desc">
+            Producing PhD literature reviews and conference drafts in LaTeX on digital
+            transformation and e-government adoption in South Asia.
+          </p>
+          <div class="project-tags">
+            <span class="tag">LaTeX</span><span class="tag">Research</span><span class="tag">E-Gov</span>
+          </div>
+          <div class="project-footer">
+            <span><i data-lucide="book-marked"></i> PhD pipeline</span>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <div class="project-icon"><i data-lucide="git-branch"></i></div>
+            <span class="project-status">Live</span>
+          </div>
+          <h3 class="project-title">Personal Portfolio (this site)</h3>
+          <p class="project-desc">
+            A modern, fully static portfolio built with semantic HTML, modern CSS, and
+            vanilla JavaScript—deployed on GitHub Pages with zero build step.
+          </p>
+          <div class="project-tags">
+            <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">GitHub Pages</span>
+          </div>
+          <div class="project-footer">
+            <span><i data-lucide="globe"></i> drdsajal.github.io</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="tab-panel" id="panel-experience" role="tabpanel">
+      <div class="panel-header">
+        <span class="panel-tag">// 04</span>
+        <h2>Experience</h2>
+        <p class="panel-sub">A timeline of roles, growth, and impact.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot"><i data-lucide="flask-conical"></i></div>
+          <div class="tl-content">
+            <div class="tl-head">
+              <h3>PhD Researcher — Information Technology</h3>
+              <span class="tl-time">2024 — Present</span>
+            </div>
+            <p class="tl-org">City University Malaysia &middot; Kuala Lumpur</p>
+            <ul class="bullet-list">
+              <li>Researching digital transformation and e-government in South Asian public sectors.</li>
+              <li>Completed PhD pre-requisite coursework in advanced IT and research methods.</li>
+              <li>Building a literature review pipeline using LaTeX and citation management.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"><i data-lucide="users"></i></div>
+          <div class="tl-content">
+            <div class="tl-head">
+              <h3>Customer Service Supervisor <span class="promo">Promoted</span></h3>
+              <span class="tl-time">Aug 2021 — Present</span>
+            </div>
+            <p class="tl-org">Robi Axiata PLC &middot; Narayanganj, Bangladesh</p>
+            <ul class="bullet-list">
+              <li>Supervised &amp; trained a team of 6 customer service representatives.</li>
+              <li>Implemented digital workflow &amp; automation tools — improved response time by <strong>70%</strong>.</li>
+              <li>Built performance dashboards in Excel &amp; database tools to monitor KPIs.</li>
+              <li>Led process improvement initiatives aligned with digital transformation goals.</li>
+              <li>Handled complex escalations and coordinated with technical teams.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"><i data-lucide="headphones"></i></div>
+          <div class="tl-content">
+            <div class="tl-head">
+              <h3>Customer Service Executive</h3>
+              <span class="tl-time">Jun 2017 — Jul 2021</span>
+            </div>
+            <p class="tl-org">Robi Axiata PLC &middot; Narayanganj, Bangladesh</p>
+            <ul class="bullet-list">
+              <li>Managed high-volume telecom customer interactions — billing, technical, service.</li>
+              <li>Maintained CRM systems &amp; ensured accurate documentation of cases.</li>
+              <li>Identified recurring issues and contributed to process improvements.</li>
+              <li>Consistently delivered service quality aligned with KPIs &amp; SLAs.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"><i data-lucide="graduation-cap"></i></div>
+          <div class="tl-content">
+            <div class="tl-head">
+              <h3>Master of Business Administration (MBA)</h3>
+              <span class="tl-time">2014 — 2016</span>
+            </div>
+            <p class="tl-org">Govt. Tolaram College &middot; Narayanganj</p>
+            <ul class="bullet-list">
+              <li>CGPA: 2.88 / 4 &middot; 32/32 credits completed.</li>
+              <li>Foundational coursework in management, operations, and analytics.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-bracket">&lt;</span>
+        <span class="brand-name">DRD<span class="accent">.</span>Sajal</span>
+        <span class="brand-bracket">/&gt;</span>
+      </div>
+      <p class="muted small">
+        © <span id="year"></span> Dev Rabi Das Sajal &middot; Built with HTML, CSS &amp; vanilla JS &middot; Hosted on GitHub Pages
+      </p>
+      <div class="footer-links">
+        <a href="mailto:drd.sajal1992@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
+        <a href="https://linkedin.com/in/drdsajal" target="_blank" rel="noopener" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+        <a href="https://drdsajal.github.io/portfolio/" target="_blank" rel="noopener" aria-label="GitHub Pages"><i data-lucide="github"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
