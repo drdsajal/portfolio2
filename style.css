@@ -520,6 +520,29 @@ ul { list-style: none; }
 }
 .project-footer i { width: 15px; height: 15px; color: var(--accent); }
 
+/* ---------- Experience tab: two-column grid ---------- */
+.exp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.25rem;
+}
+.exp-col-header {
+  display: flex; align-items: center; gap: 0.6rem;
+  margin-bottom: 1.4rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--border);
+}
+.exp-col-header i {
+  width: 22px; height: 22px;
+  color: var(--accent);
+}
+.exp-col-header h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
 /* ---------- Experience timeline ---------- */
 .timeline { position: relative; padding-left: 1.75rem; }
 .timeline::before {
@@ -625,6 +648,7 @@ ul { list-style: none; }
   .hero-inner { grid-template-columns: 1fr; gap: 2rem; }
   .summary-grid { grid-template-columns: 1fr; }
   .skills-grid, .projects-grid { grid-template-columns: 1fr; }
+   .exp-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .skill-card.span-2 { grid-column: auto; }
   .form-row { grid-template-columns: 1fr; }
   .skill-row { grid-template-columns: 1fr; gap: 0.35rem; }
